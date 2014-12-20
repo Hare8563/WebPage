@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head><style type="text/css">p { font-size: 60px; }</style>
+  <meta charset="UTF-8">
+  <title>CONTENTS</title>
+  <style>
+    body{
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+  </style>
+</head>
+<body>
+<!-- Start your code here -->
+  <!--どのコンテンツを表示するかを判別するためのフィールド
+  ALL: 0
+  VIDEO: 1
+  IMAGE: 2
+  OBJ: 3 <--作るかなぁ
+  -->
+  <input value="0" name="contentsValue" type="hidden">
+<header>
+  <h1>CONTENTS PAGE</h1>
+  <button onclick="document.getElementsByName('contentsValue').value = '0';">ALL</button>
+  <button onclick="document.getElementsByName('contentsValue').value = '1';">VIDEO</button>
+  <button onclick="document.getElementsByName('contentsValue').value = '2';">IMAGE</button>
+  <button onclick="document.getElementsByName('contentsValue').value = '3';">OBJECT</button>
+  </header>
+  <hr>
+<img src="img1.jpg" id="2" height="80" width="120">
+
+
+<?php
+	try{
+	$db= new PDO('sqlite:Report.db');
+	print('データベースに接続できました');	
+	}catch(Exception $e){
+		print('エラーメッセージ:'.$e->getMessage());
+	}
+	$result=$db->query("SELECT * FROM Image;")->fetchAll(PDO::FETCH_NUM);
+	print("<div id="contents">");
+	$i=0;
+	foreach($result as $row){
+	print("<img src=".$row." id=".$i." height='80' width='120'>");
+	$i++;
+	}
+	print("</div>");
+
+?>
+  <!-- <div id="contents"> -->
+    <!--ここにコンテンツをスクリプトで埋め込む-->
+    <!-- <img src="" id="1" height="80" width="120">
+    <img src="" id="2" height="80" width="120">
+    <img src="" id="3" height="80" width="120">
+    <img src="" id="4" height="80" width="120">
+    <img src="" id="5" height="80" width="120">
+    <img src="" id="6" height="80" width="120">
+    <img src="" id="7" height="80" width="120">
+  </div> -->  
+<!-- End your code here -->
+<script>/* Write JavaScript here */
+	
+	
+	
+	
+	
+	</script></body>

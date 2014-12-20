@@ -1,0 +1,24 @@
+h1{
+  /*h1のstyle設定*/
+}
+h2{
+}	 
+
+body { 
+  background-image: url(image.jpg); 
+ 	background:url("takeshocke.jpg")no-repeat center,#aaaaaa; /* 背景画像をhtml要素に表示 */
+   	background-size:cover; /* 背景画像をhtml要素にフィット */
+   min-height: 100%; /* html要素をウィンドウサイズにフィット */	
+   text-align: center;
+
+}
+header{
+  
+}
+article{
+  
+}
+footer{
+  	position:relative;top: 90px;
+
+}

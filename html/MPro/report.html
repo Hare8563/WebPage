@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>作業報告システム</title>
+<style>
+textarea{
+resize: none;
+width: 480px;
+height: 240px;
+}
+</style>
+</head>
+<body>
+<h1>作業報告システム</h1>
+<div widht="640">
+<form method="POST" action="uploadFile.php" enctype="multipart/form-data">
+<table border="4">
+<tbody>
+<tr><td>チーム名</td><td>
+<select name="teamName">
+<option value="1">Team:Rocket</option>
+<option value="2">Team Clutch</option>
+<option value="3">Team Violet</option>
+<option value="4">Team Riot</option>
+<option value="5">Team Sky</option>
+</select></td></tr>
+<tr><td>今週やったこと</td><td><textArea name="thisWeek"></textArea></td></tr>
+<tr><td>発生した問題点</td><td><textArea name="problem"></textArea></td></tr>
+<tr><td>来週やること</td><td><textArea name="nextWeek"></textArea></td></tr>
+<tr><td>投稿画像</td><td><input type="file" name="upFile[]" multiple="multiple" accept="image/*"/></td></tr>
+<tr><td>投稿動画</td><td><input type="file" name="upVideo[]" multiple="multiple"accept="video/*"/></td></tr>
+</tbody>
+</table>
+<input type="submit" value="送信">
+</form>
+</div>
+</body>
+</html>

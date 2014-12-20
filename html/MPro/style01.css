@@ -1,0 +1,9 @@
+@charset "UTF-8";
+.buttons {
+	left: 108px;
+	top: 1px;
+	position: absolute;
+	z-index: 0;
+	width: 1160px;
+	height: 66px;
+}

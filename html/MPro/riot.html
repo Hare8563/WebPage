@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="はぢめての">
+    <script src="jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+      h1{
+      /*h1のstyle設定*/
+      color:#ffffff;
+      }
+      h2{
+      color:#ffffff;
+      }
+      div{
+      color:#ffffff;
+      }
+      body {
+      background-image: url(image.jpg);
+      background:url("img/riot_back.jpg")no-repeat center,#aaaaaa; /* 背景画像をhtml要素に\
+      表示 */
+      background-size:cover; /* 背景画像をhtml要素にフィット */
+      min-height: 100%; /* html要素をウィンドウサイズにフィット */
+      text-align: center;
+      
+      }
+      header{
+      
+      }
+      article{
+      
+      }
+      footer{
+      position:relative;top: 90px;
+      
+      }
+      
+    </style>
+    <script text="text/javascript">
+      <!--  function text_change(){
+      alert("パスワードを入力してください");
+      $('.edit').attr('contenteditable', true);
+      };
+      function new_article(){
+      alert("タイトル");
+  　　var new_article=document.createElement("article");
+      var new_title=document.createElement("div");
+          $("new_title").addClass("edit");
+          new_title.setAttribute("contenteditable","false");
+      var new_header=document.createElement("h2");
+      var new_subTitle=document.createElement("div");
+          $("new_title").addClass("edit");
+          new_title.setAttribute("contenteditable","false")
+      var new_sub=document.createElement("h3");
+      var new_hr=document.createElement("hr");
+      var new_img=document.createElement("div");
+      var new_img1=document.createElement("img");
+      var new_img2=document.createElement("img");
+      var new_img3=document.createElement("img");
+
+      new_img.innerHTML="<img src='img/img6.jpg' width='370' height='240' alt='画像1' title='画像1'/><img src='img/img6.jpg' width='370' height='240' alt='画像2' title='画像2'/><img src='img/img6.jpg' width='370' height='240' alt='画像3' title='画像3'/>";
+
+
+  　　var text_title = document.createTextNode("タイトル");
+      var text_subTitle = document.createTextNode("解説");
+      
+      new_title.appendChild(new_header);
+      new_header.appendChild(text_title);
+      new_subTitle.appendChild(new_sub);
+      new_sub.appendChild(text_subTitle);
+      
+
+
+      new_article.appendChild(new_title);
+      new_article.appendChild(new_subTitle);
+      new_article.appendChild(new_img);
+      new_article.appendChild(new_hr);
+      
+      document.getElementsByTagName("article")[0].appendChild(new_article);
+    
+      $.ajax({
+      type: "POST",
+      url: "rocket.php",
+      data: JSON.stringify(new_article.innerHtml),
+      contentType:"application/JSON",
+      dataType:"jsonp",
+      success: function(json_data){
+      　　　alert("succses");
+      },
+      console.dirxml(new_article);
+      });
+
+var $html = $("html")[0].outerHTML;
+console.log($dom.context);
+$data = {DomText : JSON.stringify($dom)};
+$.ajax({
+    url:"<?=ROOT_URL?>Reservations/domadd/<?php echo $NextId ?>",
+    type: "POST",
+    data:$data
+});
+-->
+      };
+    </script>  
+  <title>Riot</title>
+  </head>
+
+  <body>
+    <!-- Start your code here -->
+    <h1>Team:Riot Products</h1>
+    <header>
+      <!--<img src="画像ファイルのリンク" width="幅" height="高さ" alt="ここは画像が表示されないときに表示するテキスト" title="マウスオーバーしたときに表示するテキスト">--></header>
+    <hr>
+    <hr>
+    <article>    
+    </article>
+   
+    
+    <div class="edit" contenteditable="false">
+    <h2>Coming soon....</h2></div>
+    <div class="edit" contentededitable="false">
+    <h3>ロボット映像制作中</h3></div>
+    <img src="img/riot_img1.jpg" width="370" height="240" alt="画像1" title="画像1"/>
+    <img src="img/riot_img2.jpg" width="370" height="240" alt="画像2" title="画像2"/>
+    <img src="img/riot_img3.jpg" width="370" height="240" alt="画像3" title="画像3"/>
+    <hr>
+   
+
+    <h2>チーム説明</h2> 
+    <div class="edit" contenteditable="false">
+    活動休止中。
+    </div>
+    
+    <footer>
+      <!--ここはフッターです。-->
+     <!-- <button type="button" onclick="$('.edit').attr('contenteditable', true);" onclick="text_change();">編集</button>--> 
+     <nav> 
+     <button type="button" onclick="text_change();">編集</button>
+     <button type="button" onclick="new_article();">新規作成</button>
+     </nav>
+      <br/>
+     
+      <nav>
+	<a href="../index.html">トップへ</a>
+	<a href="rocket.html">Team:Rocket</a>
+	<a href="clutch.html">Team Clutch</a>
+	<a href="violet.html">Team Violet</a>
+	<a href="riot.html">Team Riot</a>
+	<a href="sky.html">Team Sky</a>
+	<a href="contents.php">コンテンツページ</a>  
+      </nav>
+    </footer>
+  </body>
+</html>
